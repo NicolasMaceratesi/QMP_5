@@ -9,11 +9,11 @@ public class Usuario {
   }
 
   public void pedirAalguienQueAgregueUnaPrendaAunGuardarropa(Usuario otroUsuario, Guardarropa unGuardarropa, Prenda unaPrenda) { ;
-    unGuardarropa.modificador.agregarPrenda(otroUsuario, unaPrenda);
+    unGuardarropa.modificador.proponerAgregarPrenda(otroUsuario, unaPrenda);
   }
 
   public void pedirAalguienQueElimineUnaPrendaAunGuardarropa(Usuario otroUsuario, Guardarropa unGuardarropa, Prenda unaPrenda) { ;
-    unGuardarropa.modificador.eliminarPrenda(otroUsuario, unaPrenda);
+    unGuardarropa.modificador.proponerEliminarPrenda(otroUsuario, unaPrenda);
   }
 }
 
@@ -57,14 +57,14 @@ public class ModificadorGuardarropa{
     this.propuestas = new ArrayList<Propuesta>;
   }
 
-  public void agregarPrenda(Usuario usuario, Prenda prenda){
+  public void proponerAgregarPrenda(Usuario usuario, Prenda prenda){
     Propuesta propuesta = new Propuesta(usuario, prenda, Accion.AGREGAR);
-    propuestas.add(prenda);
+    propuestas.add(propuesta);
   }
 
-  public void eliminarPrenda(Usuario usuario, Prenda prenda){
+  public void proponerEliminarPrenda(Usuario usuario, Prenda prenda){
     Propuesta propuesta = new Propuesta(usuario, prenda, Accion.QUITAR);
-    propuestas.add(prenda);
+    propuestas.add(propuesta);
   }
 
   public void rechazarPropuesta(Propuesta propuesta){
