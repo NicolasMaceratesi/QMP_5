@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+//solucion hecha con los integrantes del grupo
+
 public class Usuario {
   List<Guardarropa> guardarropas;
 
